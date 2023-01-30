@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.5/angular-material.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"> 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.1/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng.ckeditor/2.0.2/ng-ckeditor.min.js"></script>
+
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="bootstrap" />
+    <link data-require="font-awesome@*" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://rawgit.com/rajush/angular-dropdown-multiselect/master/dist/angular-dropdownMultiselect.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.5/angular-material.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://material.angularjs.org/1.2.5/docs.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!--script data-require="angular.js@1.3.20" data-semver="1.3.20" src="https://code.angularjs.org/1.3.20/angular.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script>
+
+    <script src="https://rawgit.com/rajush/angular-dropdown-multiselect/master/dist/angular-dropdownMultiselect.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+
+    <style>
+        /* .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        } */
+        
+        .button2 {background-color: #008000;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */ 
+        .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+        .button5 {background-color: #555555;} /* Black */
+
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        }
+        </style>
+</head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <div ng-if="registrationPage">
+        <div class="login-left">
+            <div class="login-form register">
+                <div class="d-flex justify-content-center">
+                    <!-- <apex:image url="{!$Resource.Logo}"/> -->
+                    <apex:image url="{!$Resource.Logo}" alt="IGSTC" styleClass="brand-logo"/>
+                </div>
+                <div class="pt-4">
+                    <label style="padding-left: 10%;" class="text-align-center">Registration</label>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="mb-1">
+                                <input type="text" class="form-control" id="txtFirstName" ng-model="contactDetails.FirstName" placeholder="Firstname"/>
+                            </div>
+                            <div class="mb-1">
+                                <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="Lastname"/>
+                            </div>
+                            <div class="mb-1">
+                                <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="phone"/>
+                            </div>
+                            <div class="mb-1 mt-2">
+                                <input type="email" class="form-control" id="txtEmail" ng-model="contactDetails.Email" ng-focus="removeClass('txtEmail')" placeholder="Email Address"/>
+                            </div>
+                           
+                            <div class="mb-1 position-relative">
+                                <input class="form-control" type="password" id="psw" ng-focus="passwordFocus()" ng-keyup="onPassKeyUp()" ng-model="contactDetails.Password__c" ng-pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" />
+                            </div>
+                                <br/>
+                        </div>
+
+                        <div class="col-md-2"></div>
+                        
+                        </div>
+                        
+                      
+                          
+                    <!-- </div> -->
+                    <div class="row mt-3">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div data-inline="true" class="col-3">
+                                <div>
+                                    <button  class="btn btn-success btn-block" ng-click="showloginForm()" type="submit">Back</button>
+                                </div>
+                            </div>
+
+                            <div data-inline="true" class="col-3">
+                                <div>
+                                    <button  class="btn btn-success btn-block" ng-click="saveContact()" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="loginPage">
+        <div class="login-left">
+            <div class="login-form register">
+                <div class="d-flex justify-content-center">
+                </div>
+                <div class="pt-4">
+                    <label style="padding-left: 10%;" class="text-align-center">Login Page</label>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-8">
+                                                        
+                            <div class="mb-1 mt-2">
+                                <input type="email" class="form-control" id="txtEmail" ng-model="contactDetails.Email" ng-focus="removeClass('txtEmail')" placeholder="Email Address"/>
+                            </div>
+                           
+                            <div class="mb-1 position-relative">
+                                <input class="form-control" type="password" id="psw" ng-focus="passwordFocus()" ng-keyup="onPassKeyUp()" ng-model="contactDetails.Password__c" ng-pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" />
+                            </div>
+                                <br/>
+
+                                <a href="javascript:void(0)" ng-click="showRegForm()" class="signin-google">
+                                    signUp
+                                </a>
+                        </div>
+
+                        <div class="col-md-2"></div>
+                        
+                        </div>
+                        
+                      
+                          
+                    <!-- </div> -->
+                    <div class="row mt-3">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-3">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-success btn-block" ng-click="showHomePage()" type="submit">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="Homepage">
+
+        <h3 class="mt-5" style="text-align:center">Hi you are logged in</h3>
+
+        
+        <button class="center" ng-click="OpenPopup()">create new customer</button>
+        
+    </div>
+
+
+      <div class="modal" id="flipFlop">
+        <div class="modal-dialog" style="min-width:1000px">
+          <div class="modal-content">
+      
+            <div class="modal-header">
+              <h4 class="modal-title"><div class="d-flex justify-content-center" style="background:unset;">
+                <h3>
+                    <b>customer details</b>
+                </h3>
+            </div></h4> 
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <div class="modal-body">
+                <div class="col-md-8">
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="txtFirstName" ng-model="contactDetails.FirstName" placeholder="Firstname"/>
+                    </div>
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="Lastname"/>
+                    </div>
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="company"/>
+                    </div>
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="Email"/>
+                    </div>
+                    <div class="mb-1">
+                        <input type="text" class="form-control" id="txtLastName" ng-model="contactDetails.LastName" placeholder="phone"/>
+                    </div>
+                    <div class="mb-1">
+                        <select required>
+                            <option value="" disabled selected hidden>Products</option>
+                            <option>Clothes</option>
+                            <option>Mobile</option>
+                            <option>Laptop</option>
+                            <option>Utencils</option>
+                            <option>Perfume</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                <button type="button" data-bs-dismiss="modal"  class="blue-btn float-end">Save</button>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                <button type="button" data-bs-dismiss="modal"  class="blue-btn float-end">back</button>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+    
+  </body>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.registrationPage = false;
+        $scope.loginPage = true;
+        
+        $scope.showRegForm = function(){
+            $scope.registrationPage = true;
+            $scope.loginPage = false;
+        }
+
+        $scope.showloginForm = function(){
+            $scope.registrationPage = false;
+            $scope.loginPage = true
+        }
+
+        $scope.showHomePage = function(){
+            debugger;
+            $scope.registrationPage = false;
+            $scope.loginPage = false;
+            $scope.Homepage = true;
+        }
+        
+        $scope.AddcustomerDetails = function(){
+            $scope.registrationPage = false;
+            $scope.loginPage = false;
+            $scope.Homepage = false;
+            $scope.newForm = true;
+        }
+
+        $scope.OpenPopup = function () {
+        var myModal = new bootstrap.Modal(document.getElementById('flipFlop'))
+        myModal.show('slow')
+        $scope.$apply();
+    }
+    
+
+        
+    });
+    </script>
+</html>
